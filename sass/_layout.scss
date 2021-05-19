@@ -1,0 +1,16 @@
+.container {
+  max-width: 120rem;
+  margin: 10vh auto;
+}
+
+//header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-grey-light-1;
+  height: 7rem;
+  font-size: 1.5rem;
+
+  border-bottom: var(--line);
+}
