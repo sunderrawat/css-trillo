@@ -59,6 +59,12 @@
   justify-content: center;
   align-items: center;
   flex: 0 0 40%;
+
+  @media only screen and (max-width: $bp-small){
+    flex: 0 0 100%;
+    order: 1;
+    background-color: $color-grey-light-2;
+  }
   &__input {
     font-size: inherit;
     color: inherit;
@@ -107,9 +113,19 @@
   flex-direction: column;
   margin-top: 4rem;
 
+  @media only screen and (max-width: $bp-medium){
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0;
+      flex: 1;
+    }
+
   &__item {
     list-style: none;
     position: relative;
+    @media only screen and (max-width: $bp-medium){
+      flex: 1;
+    }
   }
   &__item::before {
     position: absolute;
@@ -139,6 +155,15 @@
 
     display: flex;
     padding: 2rem;
+
+    @media only screen and (max-width: $bp-medium){
+      justify-content: center;
+
+    }
+     @media only screen and (max-width: $bp-small){
+    flex-direction: column;
+    align-items: center;
+  }
   }
   &__item--active {
     background-color: $color-primary;
@@ -148,6 +173,9 @@
     width: 2rem;
     margin: 0 2rem;
     fill: currentColor;
+     @media only screen and (max-width: $bp-small){
+    margin-bottom: 1rem;
+  }
   }
 }
 
@@ -156,6 +184,10 @@
     color: $color-grey-light-1;
     padding: 4rem;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium){
+      display: none;
+    }
 }
 
 //gallery
@@ -176,12 +208,22 @@
   align-items: center;
   height: 7rem;
   background-color: #fff;
+
+  @media only screen and (max-width: $bp-small){
+    height: 5rem;
+  }
   &__heading {
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 100;
     letter-spacing: 2px;
     margin: 0 4rem;
+
+    @media only screen and (max-width: $bp-small){
+    font-size: 1.8rem;
+    margin: 0 1.5rem;
+    letter-spacing: 1px;
+  }
   }
 
   &__stars {
@@ -195,6 +237,11 @@
     height: 2rem;
     width: 2rem;
     fill: $color-primary;
+
+    @media only screen and (max-width: $bp-small){
+    height: 1.5rem;
+    width: 1.5rem;
+  }
   }
   &__location {
     display: flex;
@@ -233,6 +280,10 @@
   padding-bottom: 2px;
   display: inline-block;
   cursor: pointer;
+
+  @media only screen and (max-width: $bp-small){
+    font-size: 1.4rem;
+  }
 
   &:hover {
     color: $color-grey-dark-1;
@@ -336,6 +387,7 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
   &__text {
     position: relative;
     z-index: 10;
@@ -394,8 +446,12 @@
   &__book-now {
     text-transform: uppercase;
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 100;
     margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium){
+      font-size: 1.9rem;
+    }
   }
 }
 
@@ -413,6 +469,10 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+
+  @media only screen and (max-width: $bp-medium){
+      font-size: 1.6rem;
+    }
 
   & > * {
     display: inline-block;
